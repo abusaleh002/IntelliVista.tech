@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Case Studies | IntelliVista by Abu Saleh</title>
+
+  <meta name="description" content="Explore all data analytics, automation, and dashboard projects by Abu Saleh — Power BI, Python, SQL, and predictive analytics case studies." />
+  <meta name="author" content="Abu Saleh" />
+  <link rel="icon" href="assets/icons/favicon.ico" />
+  <link rel="canonical" href="https://abusaleh002.github.io/Portfolio-IntelliVista/case-studies.html" />
+
+  <!-- Tailwind + Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif'] },
+          colors: {
+            brand: { 500: '#42b2ff', 400: '#64c8ff', 700: '#1c5dc2' },
+            ink: '#0b1020', soft: '#0f172a'
+          },
+          boxShadow: { glow: '0 10px 25px rgba(66,178,255,0.25)' },
+          borderRadius: { xl2: '1.25rem' }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0b1020; color: white; }
+    .card-gradient { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); transition: all 0.3s ease; }
+    .card-gradient:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); }
+    .hero-bg { background: radial-gradient(1000px 500px at 80% -10%, rgba(66,178,255,0.15), transparent 60%), linear-gradient(180deg, #0b1020, #0f172a); }
+    .fade-in { animation: fadeIn 1s ease-in; }
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- Top Navigation -->
+  <header class="bg-ink/80 backdrop-blur border-b border-white/10 sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="index.html" class="text-brand-400 hover:text-brand-300 text-sm font-medium flex items-center gap-2">
+        ← Back to Home
+      </a>
+      <h1 class="text-white text-base font-semibold">All Case Studies</h1>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero-bg py-16 text-center">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold mb-3">Explore All Case Studies</h2>
+      <p class="text-white/70 text-lg">A curated collection of dashboards, automation, and analytics projects that solved real business problems.</p>
+    </div>
+  </section>
+
+  <!-- Case Study Grid -->
+  <section class="py-20 fade-in">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Retail Sales -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard1.png" alt="Retail Sales Dashboard" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Retail Sales Visibility</h3>
+        <p class="mt-2 text-white/70 text-sm">Developed a Power BI dashboard integrating POS and inventory data for performance insights.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>Combined 2 years of sales data</li>
+          <li>Improved regional visibility</li>
+          <li>Automated weekly reports</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/Retail-Sales-Analytics" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+      <!-- SaaS Churn -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard2.png" alt="SaaS Churn Insights" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">SaaS Churn Insights</h3>
+        <p class="mt-2 text-white/70 text-sm">Built a predictive model to identify churn-prone users and optimize retention strategies.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>Reduced churn by 15%</li>
+          <li>Automated monthly insights</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/SaaS-Churn-Insights" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+      <!-- Sales Forecasting -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard3.png" alt="Sales Forecasting" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Sales Forecasting Automation</h3>
+        <p class="mt-2 text-white/70 text-sm">Developed ML-based forecasting to optimize stock and resource planning.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>92% forecast accuracy</li>
+          <li>Automated weekly reports</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/Sales-Forecasting-ML" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+      <!-- Customer Segmentation -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard4.png" alt="Customer Segmentation" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Customer Segmentation Dashboard</h3>
+        <p class="mt-2 text-white/70 text-sm">Used clustering to identify high-value customers and improve marketing ROI.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>4 customer clusters</li>
+          <li>3× ROI improvement</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+      <!-- GenAI Tools -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard5.png" alt="GenAI Tools" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">GenAI Resume & JD Matcher</h3>
+        <p class="mt-2 text-white/70 text-sm">LangChain-based AI assistant for resume Q&A and job description alignment.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>Built with FAISS and LangChain</li>
+          <li>Integrated retrieval-augmented search</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/GenAI-Resume-Matcher" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+      <!-- Interactive Viz -->
+      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
+        <img src="assets/images/dashboard6.png" alt="Interactive Visualization" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Interactive Data Visualization</h3>
+        <p class="mt-2 text-white/70 text-sm">Built a multi-page visualization dashboard using D3.js for real-time exploration.</p>
+        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
+          <li>Dynamic filters and transitions</li>
+          <li>Deployed on GitHub Pages</li>
+        </ul>
+        <a href="https://github.com/abusaleh002/Interactive-DataViz" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="max-w-7xl mx-auto px-4 text-sm text-white/60 flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> IntelliVista by Abu Saleh. All rights reserved.</p>
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/abusaleh002/" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" class="h-5 w-5 opacity-80 hover:opacity-100 transition" alt="LinkedIn">
+        </a>
+        <a href="https://github.com/abusaleh002" target="_blank" rel="noopener">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" class="h-5 w-5 opacity-80 hover:opacity-100 transition" alt="GitHub">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
