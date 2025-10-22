@@ -3,21 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>IntelliVista | Data Analytics & Dashboard Solutions</title>
+  <title>IntelliVista | Data + AI Solutions for Businesses</title>
 
   <!-- SEO -->
-  <meta name="description" content="IntelliVista by Abu Saleh — Power BI dashboards, data analytics, and automation solutions. Turning raw business data into clear insights using Python, SQL, and AWS." />
-  <meta name="keywords" content="Power BI, data analytics, dashboards, business intelligence, automation, Abu Saleh, IntelliVista, Python, SQL, AWS" />
+  <meta name="description" content="IntelliVista offers data analytics, automation, machine learning, and AI solutions to help businesses gain actionable insights and automate decisions. From Power BI dashboards to predictive models, IntelliVista transforms data into strategy." />
+  <meta name="keywords" content="Data analytics, AI automation, Power BI dashboards, business intelligence, LangChain, OpenAI, Python, SQL, AWS, Machine Learning, Abu Saleh, IntelliVista" />
   <meta name="author" content="Abu Saleh" />
-  <link rel="icon" href="assets/icons/favicon.ico" />
-  <link rel="canonical" href="https://abusaleh002.github.io/Portfolio-IntelliVista/" />
+  <meta name="repository" content="https://github.com/abusaleh002/IntelliVista.tech" />
+  <link rel="canonical" href="https://intellivista.tech/" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="IntelliVista | Data Analytics & Dashboard Solutions" />
-  <meta property="og:description" content="Interactive dashboards and analytics automation by Abu Saleh." />
-  <meta property="og:image" content="https://abusaleh002.github.io/Portfolio-IntelliVista/assets/images/cover.png" />
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:title" content="IntelliVista | Data + AI Solutions for Businesses" />
+  <meta property="og:description" content="Transforming business data into actionable intelligence using Power BI, Python, and AI automation." />
+  <meta property="og:image" content="https://intellivista.tech/assets/images/cover.png" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://abusaleh002.github.io/Portfolio-IntelliVista/" />
+  <meta property="og:url" content="https://intellivista.tech/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="IntelliVista | Data + AI Solutions for Businesses" />
+  <meta name="twitter:description" content="Automate, analyze, and predict with data — from Power BI dashboards to AI-driven insights." />
+  <meta name="twitter:image" content="https://intellivista.tech/assets/images/cover.png" />
+  <meta name="twitter:creator" content="@AbuSaleh002" />
+
+  <!-- Favicon & App Icons -->
+  <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.ico" />
+  <link rel="manifest" href="assets/icons/site.webmanifest" />
+  <meta name="theme-color" content="#0b1020" />
 
   <!-- Fonts & Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -54,11 +69,9 @@
     .hover-scale:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); background-color: rgba(255,255,255,0.02); }
     .btn-primary { transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease; }
     .btn-primary:hover { background-color: #5ed2ff; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(94,210,255,0.25); }
-    .thumb { filter: blur(1.25px); opacity: 0.85; transition: filter 0.35s ease, opacity 0.35s ease; }
-    .hover-scale:hover .thumb { filter: blur(0.25px); opacity: 1; }
   </style>
 
-  <!-- Google Analytics (GA4) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-14L6R51XED"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -68,410 +81,653 @@
   </script>
 </head>
 
+
 <body class="bg-ink text-white font-sans antialiased">
+
   <!-- Header -->
   <header class="sticky top-0 z-50 backdrop-blur bg-ink/70 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      
-      <!-- Updated Logo Section -->
-      <div class="leading-tight">
-  <a href="#" class="flex items-center gap-2" aria-label="IntelliVista home">
-    <div class="p-1.5 bg-white/10 rounded-lg backdrop-blur-sm flex items-center justify-center">
-      <img src="assets/images/logo.png" 
-           alt="IntelliVista Logo" 
-           class="h-11 w-auto brightness-125 contrast-125 transition-transform duration-300 hover:scale-105">
-    </div>
-    <span class="font-extrabold tracking-tight text-white text-xl">IntelliVista</span>
-  </a>
-  <div class="text-[0.75rem] text-white/60 mt-0.5">
-    Turning business data into clear insights with Power BI, Python, and automation.
-  </div>
-</div>
-
-      <!-- Navigation -->
+      <a href="#" class="flex items-center gap-2">
+        <img src="assets/images/logo.png" alt="IntelliVista Logo" class="h-10 w-auto">
+        <span class="font-bold text-xl">IntelliVista</span>
+      </a>
       <nav class="hidden md:flex items-center gap-8 text-sm">
         <a href="#services" class="hover:text-brand-300">Services</a>
         <a href="#cases" class="hover:text-brand-300">Case Studies</a>
         <a href="#pricing" class="hover:text-brand-300">Pricing</a>
-        <a href="#contact" class="btn-primary px-4 py-2 rounded-xl2 bg-brand-500 shadow-glow focus:outline-none focus:ring-2 focus:ring-white/20">Contact</a>
+        <a href="#contact" class="btn-primary px-4 py-2 rounded-xl2 bg-brand-500 shadow-glow">Contact</a>
       </nav>
-
-      <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-md hover:bg-white/10" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
-      <div class="px-4 py-3 space-y-2">
-        <a href="#services" class="block py-2">Services</a>
-        <a href="#cases" class="block py-2">Case Studies</a>
-        <a href="#pricing" class="block py-2">Pricing</a>
-        <a href="#contact" class="block py-2">Contact</a>
-      </div>
     </div>
   </header>
 
-
-
   <!-- Hero -->
-  <section class="hero-grid relative py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-12 gap-8 items-center">
-        <div class="lg:col-span-7">
-          <span class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white/70 bg-white/5 px-3 py-1 rounded-full ring-1 ring-white/10">Freelance Analytics Partner</span>
-          <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-            Data Analytics & Dashboard Solutions for Businesses
-          </h1>
-          <p class="text-white/60 text-sm mt-3">Trusted by businesses for transforming raw data into strategic insights.</p>
-          <p class="mt-6 text-lg text-white/80 max-w-2xl">I help organizations turn raw data into clear insights through interactive dashboards, automated reporting, and machine learning-driven analytics.</p>
-          <div class="mt-8 flex flex-wrap items-center gap-3">
-            <a href="#contact" class="btn-primary px-6 py-3 rounded-xl2 bg-brand-500 shadow-glow font-semibold focus:outline-none focus:ring-2 focus:ring-white/20">Schedule a Free 15-Minute Call</a>
-            <a href="#cases" class="px-6 py-3 rounded-xl2 ring-1 ring-white/20 hover:bg-white/5 transition">View Sample Projects</a>
-          </div>
-          <p class="mt-4 text-sm text-white/60">Typical tools: Power BI, Python, SQL, Excel, Tableau, Streamlit</p>
+<section class="hero-grid relative py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Left Column -->
+      <div class="lg:col-span-7">
+        <span class="inline-flex items-center gap-2 text-xs uppercase tracking-wider text-white/70 bg-white/5 px-3 py-1 rounded-full ring-1 ring-white/10">
+          Data Analytics • AI • Automation
+        </span>
+
+        <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight bg-gradient-to-r from-brand-300 via-white to-brand-500 bg-clip-text text-transparent">
+          Data + AI Solutions that Turn Business Data into Actionable Intelligence
+        </h1>
+
+        <p class="mt-6 text-lg text-white/80 max-w-2xl">
+          IntelliVista helps businesses automate, analyze, and predict with data.
+          From Power BI dashboards to Machine Learning models and AI agents,
+          we transform raw numbers into smart, automated insights.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a href="#contact" class="btn-primary px-6 py-3 rounded-xl2 bg-brand-500 shadow-glow font-semibold focus:outline-none focus:ring-2 focus:ring-white/20">
+            Get a Free Data & AI Audit
+          </a>
+          <a href="#cases" class="px-6 py-3 rounded-xl2 ring-1 ring-white/20 hover:bg-white/5 transition">
+            View Case Studies
+          </a>
         </div>
-        <div class="lg:col-span-5">
-          <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 shadow-glow">
-            <p class="text-sm text-white/70">Typical stack</p>
-            <ul class="mt-3 grid grid-cols-2 gap-3 text-sm">
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Power BI</li>
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Tableau</li>
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> SQL</li>
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> Python</li>
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> dbt</li>
-              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand-400"></span> AWS</li>
-            </ul>
-          </div>
+
+        <!-- Confidence Hook -->
+        <p class="mt-4 text-base text-white/70">
+          Save hours each week and make smarter decisions with automated analytics and AI-powered insights.
+        </p>
+      </div>
+
+      <!-- Right Column (Compact Tech Stack) -->
+      <div class="lg:col-span-5">
+        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 shadow-glow">
+          <p class="text-sm text-white/70 mb-1 font-semibold">Tech Stack</p>
+          <p class="text-white/80 text-sm">
+            Python | SQL | Power BI | Tableau | AWS | LangChain | OpenAI API
+          </p>
         </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-soft">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl sm:text-4xl font-bold">What I Can Do for You</h2>
-        <p class="mt-2 text-white/60">Each service is delivered with clarity, speed, and measurable results.</p>
-        <p class="mt-3 text-white/70">Pick a service or combine multiple to fit your business goals. Every project is customized for clarity, speed, and measurable impact.</p>
-      </div>
-      <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold">📊 BI Dashboards</h3>
-          <p class="mt-2 text-white/70">Create interactive dashboards in Power BI or Tableau that track KPIs, revenue, and performance metrics in real time.</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
-            <li>Data cleaning and modeling</li>
-            <li>KPI and trend visualization</li>
-            <li>Scheduled data refresh and access control</li>
-          </ul>
-        </article>
-        <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold">⚙️ Reporting Automation</h3>
-          <p class="mt-2 text-white/70">Automate repetitive reporting tasks using Python and SQL scripts to save time and reduce manual errors.</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
-            <li>Automated data updates</li>
-            <li>Excel/CSV integration and email delivery</li>
-            <li>Custom scheduling setup</li>
-          </ul>
-        </article>
-        <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold">🤖 Analytics Consulting</h3>
-          <p class="mt-2 text-white/70">Turn business questions into data-driven insights. From data audits to predictive analysis, I help you make smarter decisions.</p>
-          <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
-            <li>Data exploration and visualization</li>
-            <li>Predictive analytics and forecasting</li>
-            <li>Insights presentation and training</li>
-          </ul>
-        </article>
-      </div>
+<section id="services" aria-label="Data analytics, automation, machine learning, and AI services" class="py-20 bg-soft">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section Header -->
+    <div class="max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-bold">Our Core Solutions — From Data to Intelligence</h2>
+      <p class="mt-3 text-white/70">
+        Pick a service or combine multiple to fit your business goals. Every project is customized for clarity, speed, and measurable impact.
+      </p>
     </div>
-  </section>
+
+    <!-- Service Grid -->
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <!-- 1️⃣ Business Intelligence Dashboards -->
+      <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 service-card">
+        <h3 class="text-xl font-semibold">📊 Business Intelligence Dashboards</h3>
+        <p class="text-white/60 text-sm italic">See your entire business in one view.</p>
+        <p class="mt-2 text-white/70">
+          Create interactive dashboards in Power BI or Tableau that track KPIs, revenue, and performance metrics in real time.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
+          <li>Data cleaning & modeling</li>
+          <li>KPI and trend visualization</li>
+          <li>Scheduled data refresh and access control</li>
+        </ul>
+      </article>
+
+      <!-- 2️⃣ Data Automation & Workflow Optimization -->
+      <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 service-card">
+        <h3 class="text-xl font-semibold">⚙️ Data Automation & Workflow Optimization</h3>
+        <p class="text-white/60 text-sm italic">Save time and eliminate repetitive manual work.</p>
+        <p class="mt-2 text-white/70">
+          Automate repetitive reporting tasks using Python, SQL, or APIs to save time and reduce manual errors.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
+          <li>Automated data updates</li>
+          <li>Excel/CSV integration and email delivery</li>
+          <li>Custom scheduling setup</li>
+        </ul>
+      </article>
+
+      <!-- 3️⃣ Machine Learning Solutions -->
+      <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 service-card">
+        <h3 class="text-xl font-semibold">🤖 Machine Learning Solutions</h3>
+        <p class="text-white/60 text-sm italic">Predict outcomes and make data-driven decisions.</p>
+        <p class="mt-2 text-white/70">
+          Build predictive models that help businesses forecast, segment, and personalize with data.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
+          <li>Sales and demand forecasting</li>
+          <li>Customer segmentation</li>
+          <li>Recommendation systems</li>
+          <li>Anomaly detection</li>
+        </ul>
+      </article>
+
+      <!-- 4️⃣ Agentic AI & Intelligent Automation -->
+      <article class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 service-card">
+        <h3 class="text-xl font-semibold">🧠 Agentic AI & Intelligent Automation</h3>
+        <p class="text-white/60 text-sm italic">Let AI handle routine analysis and reporting.</p>
+        <p class="mt-2 text-white/70">
+          Deploy AI agents that understand your data and perform smart tasks—from generating reports to chatting with your dashboards.
+        </p>
+        <ul class="mt-4 space-y-2 text-sm text-white/70 list-disc list-inside">
+          <li>Chat-with-your-data apps</li>
+          <li>AI report assistants</li>
+          <li>Workflow automation bots</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <p class="text-white/60 mb-3 text-sm">
+        Not sure which solution fits your business?
+      </p>
+      <a href="#contact" class="inline-flex items-center gap-2 bg-brand-500 text-white font-medium px-6 py-3 rounded-lg shadow-glow hover:bg-brand-400 transition">
+        Request a Free Data & AI Audit <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Service Card Hover Effect -->
+<style>
+  .service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 162, 255, 0.2);
+  }
+</style>
+
+
+
 
   <!-- Case Studies -->
-  <section id="cases" class="py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <p class="text-xs text-white/60">See how data-driven solutions helped my clients improve decisions and efficiency.</p>
-        <h2 class="text-3xl sm:text-4xl font-bold">Real-World Results</h2>
-        <p class="mt-3 text-white/70">Here are a few sample outcomes based on real or simulated business scenarios.</p>
-      </div>
-      <div class="mt-10 grid md:grid-cols-2 gap-6">
+<section id="cases" class="py-20" aria-label="Data analytics, machine learning, automation, and AI project case studies">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- 1️⃣ Retail Sales -->
-        <article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-          <img src="assets/images/dashboard1.png" alt="Retail sales dashboard preview" class="h-[240px] w-[600px] object-contain mx-auto rounded-xl" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">AI-Powered Retail Sales Forecasting</h3>
-    <p class="mt-2 text-white/70">
-      Helped a mid-size retail client enhance sales prediction accuracy and optimize inventory planning using advanced time-series and deep learning models (LSTM, GRU, ARIMA, SARIMA, XGBoost) deployed through AWS SageMaker.
-    </p>
-    <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-      <li>Boosted forecasting accuracy by 30%</li>
-      <li>Reduced excess inventory costs by 15%</li>
-      <li>Automated model retraining and deployment with AWS SageMaker</li>
-    </ul>
-    <div class="mt-4">
-      <a href="https://github.com/abusaleh002/AI-Driven-Sales-Forecasting-Model-Python-AWS-SageMaker" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition">
-        💻 View on GitHub <span aria-hidden="true">→</span>
-      </a>
+    <!-- Header -->
+    <div class="max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-bold">Real-World Results — Data, Automation & AI in Action</h2>
+      <p class="mt-3 text-white/70">
+        Explore how IntelliVista’s data, automation, and AI solutions help businesses improve efficiency and decision-making.
+      </p>
     </div>
-  </div>
-</article>
 
-        <!-- Retail Sales Performance Dashboard -->
-<article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-  <img src="assets/images/dashboard-retail.png" alt="Retail sales performance Power BI dashboard preview"
-       class="h-[240px] w-[600px] object-contain mx-auto rounded-lg" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">Retail Sales Performance Dashboard</h3>
-    <p class="mt-2 text-white/70">
-      Designed an interactive Power BI dashboard for a national retail chain using Walmart-style sales data.  
-      Enabled executives and analysts to monitor performance across regions, products, and categories in real time.
-    </p>
-    <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-      <li>Consolidated two years of sales and inventory data (2022 – 2024)</li>
-      <li>Identified key profit drivers and optimized category mix</li>
-      <li>Reduced manual reporting time by 60% through automated updates</li>
-      <li>Improved strategic visibility for regional and store-level planning</li>
-    </ul>
-    <div class="mt-4">
-      <a href="https://github.com/abusaleh002/Retail-Sales-Performance-Dashboard-Power-BI-DAX-Excel-" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition">
-        💻 View on GitHub <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-</article>
+    <!-- Grid -->
+    <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-
-<!-- GenAI Tools — Resume Q&A + JD Matcher -->
-<article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-  <img src="assets/images/GenAi-Tools.png" alt="GenAI resume and job description matcher app preview"
-       class="h-[240px] w-[600px] object-contain mx-auto rounded-lg" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">GenAI Tools — Resume Q&A + JD Matcher</h3>
-    <p class="mt-2 text-white/70">
-      Built an AI-powered career assistant using Streamlit, LangChain, and Groq/OpenAI models to help users match resumes with job descriptions and receive instant improvement suggestions.
-    </p>
-    <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-      <li>Implemented vector-based semantic search using FAISS</li>
-      <li>Integrated LLM models for contextual resume analysis</li>
-      <li>Delivered interactive Streamlit UI for real-time feedback</li>
-      <li>Deployed locally for privacy and offline use</li>
-    </ul>
-    <div class="mt-4 flex flex-wrap gap-3">
-      <a href="https://github.com/abusaleh002/GenAI-Tools" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition">
-        💻 View on GitHub <span aria-hidden="true">→</span>
-      </a>
-      <a href="https://genai-tools-abu-saleh.streamlit.app/" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-white/60 hover:text-brand-300 transition">
-        🚀 Live Demo <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-</article>
-
-
-
-<!-- Data Visualization Dashboard -->
-<article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-  <img src="assets/images/interactive-dashboard-js.png" alt="Interactive data visualization dashboard preview"
-       class="h-[240px] w-[700px] object-contain mx-auto rounded-lg" />
-  <div class="p-6">
-    <h3 class="text-xl font-semibold">Interactive Data Visualization Dashboard</h3>
-    <p class="mt-2 text-white/70">
-      Developed a multi-page visualization dashboard using D3.js to explore real-world datasets on health, lifestyle, and marketing. 
-      Designed for dynamic filtering and interactive chart exploration directly in the browser.
-    </p>
-    <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-      <li>Built responsive charts: scatter, histogram, pie, and stacked bar</li>
-      <li>Implemented real-time data filtering and transitions with D3.js</li>
-      <li>Improved visual storytelling through custom tooltips and legends</li>
-      <li>Hosted live via GitHub Pages for public accessibility</li>
-    </ul>
-    <div class="mt-4 flex flex-wrap gap-3">
-      <a href="https://github.com/abusaleh002/Interactive-Data-Visualization-D3.js" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition">
-        💻 View on GitHub <span aria-hidden="true">→</span>
-      </a>
-      <a href="https://abusaleh002.github.io/Interactive-Data-Visualization-D3.js/" target="_blank" rel="noopener"
-         class="inline-flex items-center gap-1 text-white/60 hover:text-brand-300 transition">
-        🚀 Live Demo <span aria-hidden="true">→</span>
-      </a>
-    </div>
-  </div>
-</article>
-
-
-
-
- <!-- 2️⃣ SaaS Churn -->
-        <article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-          <img src="assets/images/dashboard2.png" alt="SaaS churn insights dashboard preview" class="h-[240px] w-[600px] object-contain mx-auto rounded-xl" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">SaaS Churn Insights</h3>
-            <p class="mt-2 text-white/70">Created an analytics model with automated monthly reports to identify churn risk.</p>
-            <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-              <li>Detected key customer segments driving churn</li>
-              <li>Increased retention rate by 15%</li>
-              <li>Simplified reporting with a one-click dashboard</li>
-            </ul>
-            <a href="https://github.com/abusaleh002/SaaS-Churn-Insights" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-1 mt-4 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition text-sm">
-               View full case study on GitHub <span aria-hidden="true">→</span>
-            </a>
+      <!-- 🟦 Business Intelligence -->
+      <article class="rounded-2xl overflow-hidden border-t-4 border-brand-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(100,200,255,0.2)] transition">
+        <img src="assets/images/dashboard-retail.png" alt="IntelliVista Power BI retail sales performance dashboard case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 bg-brand-500/10 px-2 py-1 rounded-full mb-3">📊 Business Intelligence</span>
+          <h3 class="text-lg font-semibold">Developed a Retail Sales Performance Dashboard</h3>
+          <p class="mt-2 text-white/70 text-sm">Consolidated sales data into a unified Power BI dashboard, enabling executives to track KPIs and performance in real time.</p>
+          <p class="mt-2 text-white/60 text-sm">💡 Reduced weekly reporting time by 60%.</p>
+          <p class="mt-3 text-xs text-brand-300">Python | Power BI | SQL</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="https://github.com/abusaleh002/Retail-Sales-Performance-Dashboard-Power-BI-DAX-Excel-" target="_blank" class="text-brand-300 hover:underline">View on GitHub →</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-
-        <!-- 4️⃣ Customer Segmentation -->
-        <article class="rounded-2xl overflow-hidden ring-1 ring-white/10 card-gradient hover-scale">
-          <img src="assets/images/dashboard4.png" alt="Customer segmentation dashboard preview" class="h-[240px] w-[600px] object-contain mx-auto rounded-xl" />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Customer Segmentation Dashboard</h3>
-            <p class="mt-2 text-white/70">Designed a BI dashboard to segment customers and optimize targeted marketing strategies.</p>
-            <ul class="mt-4 text-sm text-white/70 space-y-1 list-disc list-inside">
-              <li>Identified 4 high-value customer clusters</li>
-              <li>Improved campaign ROI by 3x</li>
-              <li>Delivered actionable insights through Power BI</li>
-            </ul>
-            <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" rel="noopener"
-               class="inline-flex items-center gap-1 mt-4 text-brand-300 hover:underline underline-offset-4 decoration-brand-300 transition text-sm">
-               View full case study on GitHub <span aria-hidden="true">→</span>
-            </a>
+      <article class="rounded-2xl overflow-hidden border-t-4 border-brand-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(100,200,255,0.2)] transition">
+        <img src="assets/images/dashboard1.png" alt="IntelliVista marketing campaign Power BI dashboard case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-brand-300 bg-brand-500/10 px-2 py-1 rounded-full mb-3">📊 Business Intelligence</span>
+          <h3 class="text-lg font-semibold">Built a Marketing Campaign Analytics Dashboard</h3>
+          <p class="mt-2 text-white/70 text-sm">Created a cross-channel analytics dashboard tracking conversions, spend, and ROI for campaign optimization.</p>
+          <p class="mt-2 text-white/60 text-sm">📈 Improved ROI tracking accuracy by 45%.</p>
+          <p class="mt-3 text-xs text-brand-300">Power BI | DAX | Excel</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="#" class="text-brand-300 hover:underline">View Case Study →</a>
           </div>
-        </article>
+        </div>
+      </article>
 
-      </div>
+      <!-- 🟧 Data Automation -->
+      <article class="rounded-2xl overflow-hidden border-t-4 border-amber-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(255,200,0,0.15)] transition">
+        <img src="assets/images/automation-bot.png" alt="IntelliVista automated sales reporting system Python case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-amber-300 bg-amber-500/10 px-2 py-1 rounded-full mb-3">⚙️ Data Automation</span>
+          <h3 class="text-lg font-semibold">Developed an Automated Sales Reporting System</h3>
+          <p class="mt-2 text-white/70 text-sm">Built a Python pipeline that automatically updates and shares sales reports through Google Sheets.</p>
+          <p class="mt-2 text-white/60 text-sm">⚙️ Reduced manual reporting by 80%.</p>
+          <p class="mt-3 text-xs text-amber-300">Python | SQL | Google Sheets API</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="#" class="text-amber-300 hover:underline">View Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden border-t-4 border-amber-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(255,200,0,0.15)] transition">
+        <img src="assets/images/dashboard-automation.png" alt="IntelliVista daily KPI email automation bot case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-amber-300 bg-amber-500/10 px-2 py-1 rounded-full mb-3">⚙️ Data Automation</span>
+          <h3 class="text-lg font-semibold">Built a Daily KPI Email Summary Bot</h3>
+          <p class="mt-2 text-white/70 text-sm">Created a bot that emails daily performance summaries to executives using Python and Power BI data.</p>
+          <p class="mt-2 text-white/60 text-sm">📨 Automated daily insights for stakeholders.</p>
+          <p class="mt-3 text-xs text-amber-300">Python | Power BI | SMTP API</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="#" class="text-amber-300 hover:underline">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 🟩 Machine Learning -->
+      <article class="rounded-2xl overflow-hidden border-t-4 border-emerald-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition">
+        <img src="assets/images/dashboard-ml.png" alt="IntelliVista AI-powered retail forecasting model case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded-full mb-3">🧠 Machine Learning</span>
+          <h3 class="text-lg font-semibold">Built an AI-Powered Retail Forecasting Model</h3>
+          <p class="mt-2 text-white/70 text-sm">Trained deep learning models (LSTM, XGBoost) to forecast demand and optimize inventory.</p>
+          <p class="mt-2 text-white/60 text-sm">📈 Improved forecast accuracy by 30%.</p>
+          <p class="mt-3 text-xs text-emerald-300">Python | AWS | XGBoost | LSTM</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="https://github.com/abusaleh002/AI-Driven-Sales-Forecasting-Model-Python-AWS-SageMaker" target="_blank" class="text-emerald-300 hover:underline">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden border-t-4 border-emerald-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(16,185,129,0.2)] transition">
+        <img src="assets/images/dashboard4.png" alt="IntelliVista customer segmentation ML dashboard case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-emerald-300 bg-emerald-500/10 px-2 py-1 rounded-full mb-3">🧠 Machine Learning</span>
+          <h3 class="text-lg font-semibold">Developed a Customer Segmentation Model</h3>
+          <p class="mt-2 text-white/70 text-sm">Applied clustering algorithms to identify high-value customers for targeted campaigns.</p>
+          <p class="mt-2 text-white/60 text-sm">🎯 Increased marketing ROI by 3×.</p>
+          <p class="mt-3 text-xs text-emerald-300">Python | Scikit-learn | Power BI</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" class="text-emerald-300 hover:underline">View Case Study →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 🟪 Agentic AI -->
+      <article class="rounded-2xl overflow-hidden border-t-4 border-purple-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(168,85,247,0.25)] transition relative">
+        <span class="absolute top-4 right-4 bg-purple-500/20 text-purple-200 text-xs px-2 py-1 rounded">New</span>
+        <img src="assets/images/GenAi-Tools.png" alt="IntelliVista AI report assistant LangChain Streamlit case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-purple-300 bg-purple-500/10 px-2 py-1 rounded-full mb-3">🤖 Agentic AI</span>
+          <h3 class="text-lg font-semibold">Developed an AI Report Assistant</h3>
+          <p class="mt-2 text-white/70 text-sm">Built a LangChain-based OpenAI tool that generates automated reports and insights from structured business data.</p>
+          <p class="mt-2 text-white/60 text-sm">🤖 Produced natural-language analytics summaries.</p>
+          <p class="mt-3 text-xs text-purple-300">LangChain | OpenAI API | Streamlit</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="https://github.com/abusaleh002/GenAI-Tools" target="_blank" class="text-purple-300 hover:underline">View on GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="rounded-2xl overflow-hidden border-t-4 border-purple-400/80 ring-1 ring-white/10 hover:shadow-[0_0_20px_rgba(168,85,247,0.25)] transition relative">
+        <span class="absolute top-4 right-4 bg-purple-500/20 text-purple-200 text-xs px-2 py-1 rounded">New</span>
+        <img src="assets/images/interactive-dashboard-js.png" alt="IntelliVista chat-with-your-dashboard AI app case study" class="h-[220px] w-full object-cover rounded-t-xl transition-transform duration-300 hover:scale-105" />
+        <div class="p-6">
+          <span class="inline-flex items-center gap-1 text-xs font-semibold text-purple-300 bg-purple-500/10 px-2 py-1 rounded-full mb-3">🤖 Agentic AI</span>
+          <h3 class="text-lg font-semibold">Developed a Chat-with-Your-Dashboard App</h3>
+          <p class="mt-2 text-white/70 text-sm">Built a conversational AI app allowing users to query live Power BI dashboards through chat.</p>
+          <p class="mt-2 text-white/60 text-sm">🧠 Enabled real-time Q&A over analytics data.</p>
+          <p class="mt-3 text-xs text-purple-300">LangChain | Streamlit | OpenAI API</p>
+          <div class="mt-4 flex gap-3 text-sm">
+            <a href="#" class="text-purple-300 hover:underline">View Live Demo →</a>
+          </div>
+        </div>
+      </article>
     </div>
-  </section>
 
-  <!-- View All Case Studies CTA -->
-  <div class="text-center mt-12">
-    <p class="text-white/60 mb-3 text-sm">Want to explore more analytics solutions and dashboards?</p>
+    <!-- CTA Area (Animated Same Row Layout) -->
+<div class="mt-20 text-center py-16 border-t border-white/10 bg-gradient-to-b from-soft/60 to-ink">
+  <h3 class="text-2xl font-bold mb-4 text-white">Want results like these?</h3>
+  <p class="text-white/70 mb-8 max-w-2xl mx-auto">
+    Let’s discuss what Data + AI can do for your business — from dashboards to automation and intelligent insights.
+  </p>
+
+  <!-- Buttons Side-by-Side -->
+  <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+    <!-- Primary Button -->
+    <a href="#contact"
+       class="inline-flex items-center justify-center gap-2 bg-brand-500 text-white font-semibold px-8 py-3 rounded-lg shadow-glow 
+              transform transition-all duration-300 hover:-translate-y-[3px] hover:scale-105 hover:bg-brand-400 hover:shadow-[0_8px_20px_rgba(66,178,255,0.35)]">
+      Request Free Audit
+      <span aria-hidden="true">→</span>
+    </a>
+
+    <!-- Secondary Button -->
     <a href="case-studies.html"
-       class="inline-flex items-center gap-2 bg-brand-500 text-white font-medium px-6 py-3 rounded-lg shadow-glow hover:bg-brand-400 hover:translate-y-[-2px] transition">
-       View All Case Studies <span aria-hidden="true">→</span>
+       class="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-medium px-8 py-3 rounded-lg bg-white/5 
+              transition-all duration-300 transform hover:-translate-y-[3px] hover:scale-105 hover:bg-white/10 hover:border-brand-400 hover:shadow-[0_8px_20px_rgba(255,255,255,0.15)]">
+      View All Case Studies
+      <span aria-hidden="true">→</span>
     </a>
   </div>
 
-  <!-- Pricing -->
-  <section id="pricing" class="py-20 bg-soft">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl">
-        <h2 class="text-3xl sm:text-4xl font-bold">Transparent Packages</h2>
-        <p class="mt-3 text-white/70">Every project starts with a free consultation to understand your data and business needs.</p>
+  <p class="text-xs text-white/50 mt-8">
+    Trusted by data-driven teams for automation, analytics, and AI excellence.
+  </p>
+</div>
+
+</section>
+
+
+
+  
+
+
+  <!-- Pricing & Packages -->
+<section id="pricing" class="py-24 bg-gradient-to-b from-ink to-soft border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold mb-4 text-white">
+      Transparent Packages — From Quick Dashboards to AI-Driven Automation
+    </h2>
+    <p class="text-white/70 max-w-2xl mx-auto mb-12">
+      Every project starts with a Free Data & AI Audit to understand your goals.  
+      Choose a package that fits your business stage and data maturity.
+    </p>
+
+    <!-- Packages Grid -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Starter -->
+      <div class="rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400 hover:shadow-glow transition-all duration-300 p-8 flex flex-col">
+        <h3 class="text-xl font-semibold text-white mb-2">Quick Insights Package</h3>
+        <p class="text-white/60 text-sm mb-6">Ideal for small businesses & start-ups</p>
+        <ul class="text-left text-white/70 text-sm space-y-2 flex-1">
+          <li>• Clean and prepare datasets (Excel/CSV)</li>
+          <li>• Build 1 dashboard (3–5 KPIs) in Power BI or Tableau</li>
+          <li>• Automation of data refresh and email delivery</li>
+        </ul>
+        <div class="mt-8">
+          <p class="text-3xl font-bold text-white">$499</p>
+          <p class="text-xs text-white/50">One-time project</p>
+          <p class="text-sm text-brand-400 mt-1">Typical setup completed in 1–2 weeks</p>
+        </div>
       </div>
-      <div class="mt-10 grid md:grid-cols-3 gap-6">
-        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Starter</h3>
-          <p class="text-white/70">1-page dashboard, up to 3 KPIs</p>
-          <p class="mt-4 text-brand-300 font-bold">$499</p>
+
+      <!-- Growth -->
+      <div class="rounded-2xl bg-white/5 border-2 border-brand-400 shadow-glow p-8 flex flex-col relative">
+        <span class="absolute top-4 right-4 text-xs font-medium bg-brand-500 text-white px-3 py-1 rounded-full">Most Popular</span>
+        <h3 class="text-xl font-semibold text-white mb-2">Automation & Analytics Suite</h3>
+        <p class="text-white/60 text-sm mb-6">Perfect for teams needing end-to-end reporting</p>
+        <ul class="text-left text-white/70 text-sm space-y-2 flex-1">
+          <li>• Integrate multiple data sources (SQL, API, Google Sheets)</li>
+          <li>• Automated report delivery and scheduled updates</li>
+          <li>• 1 predictive model (sales forecast or churn analysis)</li>
+          <li>• Interactive dashboard with insights summary</li>
+        </ul>
+        <div class="mt-8">
+          <p class="text-3xl font-bold text-white">$1,499</p>
+          <p class="text-xs text-white/50">End-to-end solution</p>
+          <p class="text-sm text-brand-400 mt-1">Delivers automated analytics saving 5–10 hours weekly</p>
         </div>
-        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Growth <span class="ml-1 text-xs bg-brand-500/20 text-brand-200 px-2 py-0.5 rounded">Most Popular</span></h3>
-          <p class="text-white/70">3 dashboards, data automation, and analysis summary</p>
-          <p class="mt-4 text-brand-300 font-bold">$1,499</p>
-        </div>
-        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10 hover-scale">
-          <h3 class="text-xl font-semibold mb-2">Custom</h3>
-          <p class="text-white/70">Advanced analytics or enterprise-level scaling</p>
-          <p class="mt-4 text-brand-300 font-bold">Custom quote</p>
+      </div>
+
+      <!-- Custom -->
+      <div class="rounded-2xl bg-white/5 border border-white/10 hover:border-brand-400 hover:shadow-glow transition-all duration-300 p-8 flex flex-col">
+        <h3 class="text-xl font-semibold text-white mb-2">AI Intelligence Program</h3>
+        <p class="text-white/60 text-sm mb-6">Designed for enterprises & scaling brands</p>
+        <ul class="text-left text-white/70 text-sm space-y-2 flex-1">
+          <li>• Custom Machine Learning models (forecasting, segmentation, recommendations)</li>
+          <li>• Agentic AI assistants (chat with data, AI report writer)</li>
+          <li>• Dedicated consulting & on-call support package</li>
+        </ul>
+        <div class="mt-8">
+          <p class="text-3xl font-bold text-white">Quote on Request</p>
+          <p class="text-xs text-white/50">Tailored enterprise solution</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Contact -->
-<section id="contact" class="py-20">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl">
-      <h2 class="text-3xl sm:text-4xl font-bold">Let’s Talk — Send a Message or Chat Live</h2>
-      <p class="mt-3 text-white/70">
-        Tell me a bit about your project. I usually respond within 24 hours.
-      </p>
-      <p class="mt-3 text-white/60 text-sm">
-        💬 Prefer a quick chat instead? Click the chat bubble at the bottom-right corner or
-        <a href="#" onclick="openChat(); return false;" class="text-brand-300 hover:underline">
-          chat with me live.
-        </a>
-      </p>
+    <!-- Add-ons -->
+    <div class="mt-12 text-sm text-white/60">
+      <p><span class="font-medium text-white/80">Add-ons:</span> Advanced Visual Design • Data API Integration • LLM Chat Bots • Team Training Sessions</p>
     </div>
 
-    <div class="mt-10 grid md:grid-cols-2 gap-8">
-      <!-- Contact Form -->
-      <form action="https://formspree.io/f/mwprjpbl" method="POST" class="card-gradient rounded-2xl p-6 ring-1 ring-white/10">
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-sm text-white/70" for="name">Name</label>
-            <input id="name" required name="name" type="text" 
-                   class="mt-1 w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
-                          focus:outline-none focus:ring-brand-400" />
-          </div>
-          <div>
-            <label class="block text-sm text-white/70" for="email">Email</label>
-            <input id="email" required name="email" type="email" 
-                   class="mt-1 w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
-                          focus:outline-none focus:ring-brand-400" />
-          </div>
-        </div>
-
-        <div class="mt-4">
-          <label class="block text-sm text-white/70" for="company">Company (optional)</label>
-          <input id="company" name="company" type="text" 
-                 class="mt-1 w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
-                        focus:outline-none focus:ring-brand-400" />
-        </div>
-
-        <div class="mt-4">
-          <label class="block text-sm text-white/70" for="message">Project details</label>
-          <textarea id="message" required name="message" rows="5"
-                    class="mt-1 w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
-                           focus:outline-none focus:ring-brand-400"></textarea>
-        </div>
-
-        <button class="mt-6 w-full px-4 py-3 rounded-xl2 bg-brand-500 hover:bg-brand-400 
-                       font-semibold focus:outline-none focus:ring-2 focus:ring-white/20">
-          Send message
-        </button>
-
-        <p class="mt-3 text-xs text-white/50">
-          Powered by Formspree. Replace the form action with your own provider if preferred.
-        </p>
-        <p class="mt-2 text-sm text-white/70 flex items-center gap-2">
-          🔗 Connect on 
-          <a href="https://www.linkedin.com/in/abusaleh002/" target="_blank" rel="noopener"
-             class="underline hover:text-white">LinkedIn</a>
-        </p>
-      </form>
-
-      <!-- Side Info -->
-      <div class="space-y-6">
-        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10">
-          <h3 class="font-semibold">Why Work With Me</h3>
-          <ul class="mt-3 space-y-2 text-white/70 text-sm list-disc list-inside">
-            <li>Strong background in data science and analytics</li>
-            <li>Fast, reliable communication</li>
-            <li>Clear visual reporting and documentation</li>
-          </ul>
-        </div>
-
-        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10">
-          <h3 class="font-semibold">Trust & Privacy</h3>
-          <p class="mt-3 text-white/70 text-sm">
-            Your data stays private and secure. NDA available upon request.
-          </p>
-        </div>
+    <!-- CTA with Trust Icon -->
+    <div class="mt-10 flex flex-col items-center gap-3">
+      <a href="#contact"
+         class="inline-flex items-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-8 py-3 rounded-lg shadow-glow hover:-translate-y-[2px] transition-all duration-300">
+        Request Free Audit <span aria-hidden="true">→</span>
+      </a>
+      <div class="flex items-center gap-2 text-xs text-white/50">
+        <img src="https://cdn-icons-png.flaticon.com/512/565/565547.png" alt="Secure NDA icon" class="w-4 h-4 opacity-70">
+        <span>Secure & NDA protected</span>
       </div>
     </div>
   </div>
 </section>
+
+
+ <!-- Contact / Free Data + AI Audit -->
+<section id="contact" class="py-20 bg-ink">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="max-w-2xl">
+      <h2 class="text-3xl sm:text-4xl font-bold text-white">
+        Let’s Talk About Your Data & AI Goals
+      </h2>
+      <p class="mt-3 text-white/70">
+        Tell me a bit about your business and current reporting challenges.
+        I’ll reply within 24 hours with audit results and next-step suggestions.
+      </p>
+    </div>
+
+    <div class="mt-10 grid md:grid-cols-2 gap-8">
+      
+      <!-- Contact Form -->
+      <form id="contactForm" action="https://formspree.io/f/mwprjpbl" method="POST" class="card-gradient rounded-2xl p-6 ring-1 ring-white/10">
+        <!-- Name & Email -->
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm text-white/70 mb-1" for="name">Full Name *</label>
+            <input id="name" required name="name" type="text"
+                   placeholder="Your full name"
+                   class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                          focus:outline-none focus:ring-brand-400 text-white/90" />
+          </div>
+          <div>
+            <label class="block text-sm text-white/70 mb-1" for="email">Email *</label>
+            <input id="email" required name="email" type="email"
+                   placeholder="you@example.com"
+                   class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                          focus:outline-none focus:ring-brand-400 text-white/90" />
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1" for="company">Company / Organization (optional)</label>
+          <input id="company" name="company" type="text"
+                 placeholder="Your company or brand name"
+                 class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                        focus:outline-none focus:ring-brand-400 text-white/90" />
+        </div>
+
+        <!-- Website -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1" for="website">Business Website / Store URL (optional)</label>
+          <input id="website" name="website" type="url"
+                 placeholder="https://yourbusiness.com"
+                 class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                        focus:outline-none focus:ring-brand-400 text-white/90" />
+        </div>
+
+        <!-- Tools Used -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1">What tools do you currently use?</label>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-sm text-white/80">
+            <label><input type="checkbox" name="tools" value="Excel" class="mr-2">Excel</label>
+            <label><input type="checkbox" name="tools" value="Power BI" class="mr-2">Power BI</label>
+            <label><input type="checkbox" name="tools" value="Tableau" class="mr-2">Tableau</label>
+            <label><input type="checkbox" name="tools" value="Python" class="mr-2">Python</label>
+            <label><input type="checkbox" name="tools" value="SQL" class="mr-2">SQL</label>
+            <label><input type="checkbox" name="tools" value="Other" class="mr-2">Other</label>
+          </div>
+        </div>
+
+        <!-- Data Challenge -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1" for="challenge">Describe your main data challenge *</label>
+          <textarea id="challenge" required name="challenge" rows="3"
+                    placeholder="e.g., messy sales data, manual reports, no forecasting."
+                    class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                           focus:outline-none focus:ring-brand-400 text-white/90"></textarea>
+        </div>
+
+        <!-- Desired Outcome -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1" for="outcome">Desired outcome</label>
+          <textarea id="outcome" name="outcome" rows="2"
+                    placeholder="e.g., automated dashboards, AI report assistant, predictive analytics."
+                    class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                           focus:outline-none focus:ring-brand-400 text-white/90"></textarea>
+        </div>
+
+        <!-- Budget Range -->
+        <div class="mt-4 relative">
+          <label for="budget" class="block text-sm text-white/70 mb-1">Budget Range (optional)</label>
+          <div class="relative">
+            <select id="budget" name="budget"
+              class="w-full appearance-none px-3 py-2 rounded-xl2 bg-[#111827] text-white/80 ring-1 ring-white/10
+                     focus:ring-brand-400 focus:outline-none transition duration-200 hover:bg-[#1E293B]
+                     [&>option]:bg-[#111827] [&>option]:text-white [&>option]:hover:bg-[#1E293B] [&>option]:cursor-pointer">
+              <option value="">Select a range</option>
+              <option value="Under $500">Under $500 — Small automation or 1-page dashboard project</option>
+              <option value="$500–$1,500">$500 – $1,500 — Full Power BI dashboard or ML-lite project</option>
+              <option value="$1,500–$3,000">$1,500 – $3,000 — Custom ML model, multiple dashboards, or integrations</option>
+              <option value="Above $3,000">Above $3,000 — AI assistants, multi-department solutions, enterprise analytics</option>
+            </select>
+            <!-- Dropdown Arrow -->
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 class="absolute right-3 top-2.5 h-5 w-5 text-white/60 pointer-events-none"
+                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- File Link -->
+        <div class="mt-4">
+          <label class="block text-sm text-white/70 mb-1" for="file_link">Attach File (optional)</label>
+          <input id="file_link" name="file_link" type="url"
+                 placeholder="Paste Google Drive or Dropbox link"
+                 class="w-full px-3 py-2 rounded-xl2 bg-white/5 ring-1 ring-white/10 
+                        focus:outline-none focus:ring-brand-400 text-white/90" />
+        </div>
+
+        <!-- Submit -->
+        <button id="submitBtn" type="submit"
+          class="mt-6 w-full px-4 py-3 rounded-xl2 bg-brand-500 hover:bg-brand-400 
+                 font-semibold focus:outline-none focus:ring-2 focus:ring-white/20 transition">
+          Request My Free Data & AI Audit
+        </button>
+
+        <!-- Loader -->
+        <p id="loaderText" class="mt-3 text-sm text-brand-400 hidden">Submitting your request...</p>
+
+        <p class="mt-3 text-xs text-white/50 flex items-center gap-2">
+          🔒 Secure & NDA protected
+        </p>
+
+      </form>
+
+      <!-- Trust Section -->
+      <div class="space-y-6">
+        <div class="card-gradient rounded-2xl p-6 ring-1 ring-white/10">
+          <h3 class="font-semibold text-white">Why Clients Choose IntelliVista</h3>
+          <ul class="mt-3 space-y-2 text-white/70 text-sm list-disc list-inside">
+            <li>Strong background in Data Science and AI</li>
+            <li>Fast, clear communication</li>
+            <li>Tailored, actionable insights</li>
+            <li>Secure & NDA protected</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Redirect Script -->
+  <script>
+  document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = document.getElementById("submitBtn");
+    const loader = document.getElementById("loaderText");
+
+    btn.disabled = true;
+    loader.classList.remove("hidden");
+
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    });
+
+    if (response.ok) {
+      window.location.href = "thank-you.html";
+    } else {
+      alert("Oops! Something went wrong. Please try again.");
+      btn.disabled = false;
+      loader.classList.add("hidden");
+    }
+  });
+  </script>
+</section>
+
+
+
+<!-- Schedule a Call Section -->
+<section id="schedule" class="py-20 bg-ink border-t border-white/5">
+  <div class="max-w-4xl mx-auto text-center px-6">
+
+    <!-- Header -->
+    <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+      Schedule Your Free Data + AI Consultation
+    </h2>
+    <p class="text-white/70 max-w-2xl mx-auto mb-10">
+      Let’s discuss how data analytics, automation, and AI can accelerate your business growth.  
+      Book a free 15-minute strategy session at your convenience.
+    </p>
+
+    <!-- CTA Button -->
+    <a href="#" onclick="return openCalendly();"
+       class="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-brand-500 hover:bg-brand-400 
+              font-semibold text-white text-lg shadow-glow transition-all duration-200">
+      Book a 15-Min Consultation →
+    </a>
+
+    <!-- Micro-trust line -->
+    <p class="mt-6 text-sm text-white/50 flex items-center justify-center gap-2">
+      🔒 Secure & NDA Protected
+    </p>
+  </div>
+</section>
+
+<!-- Calendly Popup Embed -->
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+
+<script>
+  function openCalendly() {
+    Calendly.initPopupWidget({ url: 'https://calendly.com/abusaleh002/30min' });
+    return false;
+  }
+</script>
+
+
+
+
 
 
   <!-- About Me (subtle) -->
@@ -480,6 +736,11 @@
       <p class="text-sm text-white/60">I’m Abu Saleh — a Data Scientist and Analyst who helps organizations transform data into strategy through analytics, automation, and BI dashboards.</p>
     </div>
   </section>
+
+
+
+
+
 
   <!-- Footer -->
   <footer class="border-t border-white/10" role="contentinfo">
@@ -561,6 +822,11 @@ s0.parentNode.insertBefore(s1,s0);
       }
     }
   </script>
+
+
+
+
+
 
 
 

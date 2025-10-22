@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>All Case Studies | IntelliVista by Abu Saleh</title>
+  <title>Case Studies & Projects | IntelliVista by Abu Saleh</title>
 
-  <meta name="description" content="Explore all data analytics, automation, and dashboard projects by Abu Saleh — Power BI, Python, SQL, and predictive analytics case studies." />
+  <!-- SEO -->
+  <meta name="description" content="Explore IntelliVista’s portfolio of data analytics, automation, machine learning, and AI projects by Abu Saleh. See real-world results that transform business data into insights." />
+  <meta name="keywords" content="Data analytics case studies, Power BI dashboards, automation, machine learning, AI, Abu Saleh, IntelliVista" />
   <meta name="author" content="Abu Saleh" />
   <link rel="icon" href="assets/icons/favicon.ico" />
-  <link rel="canonical" href="https://abusaleh002.github.io/Portfolio-IntelliVista/case-studies.html" />
 
-  <!-- Tailwind + Font -->
+  <!-- Tailwind + Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -20,7 +21,8 @@
           fontFamily: { sans: ['Inter', 'ui-sans-serif'] },
           colors: {
             brand: { 500: '#42b2ff', 400: '#64c8ff', 700: '#1c5dc2' },
-            ink: '#0b1020', soft: '#0f172a'
+            ink: '#0b1020', soft: '#0f172a',
+            bi: '#42b2ff', automation: '#f59e0b', ml: '#22c55e', ai: '#a855f7'
           },
           boxShadow: { glow: '0 10px 25px rgba(66,178,255,0.25)' },
           borderRadius: { xl2: '1.25rem' }
@@ -30,111 +32,138 @@
   </script>
   <style>
     body { background-color: #0b1020; color: white; }
-    .card-gradient { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); transition: all 0.3s ease; }
-    .card-gradient:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); }
-    .hero-bg { background: radial-gradient(1000px 500px at 80% -10%, rgba(66,178,255,0.15), transparent 60%), linear-gradient(180deg, #0b1020, #0f172a); }
-    .fade-in { animation: fadeIn 1s ease-in; }
-    @keyframes fadeIn { from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);} }
+    .card { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); transition: all 0.3s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); }
+    .filter { padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); color: white; transition: all 0.3s ease; }
+    .filter:hover { background-color: rgba(255,255,255,0.1); }
+    .filter.active { background-color: #42b2ff; border-color: #42b2ff; }
   </style>
 </head>
 
 <body class="font-sans antialiased">
-  <!-- Top Navigation -->
-  <header class="bg-ink/80 backdrop-blur border-b border-white/10 sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-4">
-      <a href="index.html" class="text-brand-400 hover:text-brand-300 text-sm font-medium flex items-center gap-2">
-        ← Back to Home
-      </a>
-      <h1 class="text-white text-base font-semibold">All Case Studies</h1>
-    </div>
-  </header>
-
-  <!-- Hero Banner -->
-  <section class="hero-bg py-16 text-center">
+  <!-- Hero -->
+  <section class="text-center py-20 bg-gradient-to-b from-soft/70 to-ink border-b border-white/10">
     <div class="max-w-3xl mx-auto px-4">
-      <h2 class="text-4xl font-extrabold mb-3">Explore All Case Studies</h2>
-      <p class="text-white/70 text-lg">A curated collection of dashboards, automation, and analytics projects that solved real business problems.</p>
+      <h1 class="text-4xl sm:text-5xl font-extrabold mb-4">Case Studies & Projects</h1>
+      <p class="text-white/70 text-lg">
+        Explore IntelliVista’s portfolio of data, automation, machine learning, and AI solutions.
+        Each project demonstrates measurable business impact and innovation.
+      </p>
     </div>
   </section>
 
-  <!-- Case Study Grid -->
-  <section class="py-20 fade-in">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-      <!-- Retail Sales -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard1.png" alt="Retail Sales Dashboard" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">Retail Sales Visibility</h3>
-        <p class="mt-2 text-white/70 text-sm">Developed a Power BI dashboard integrating POS and inventory data for performance insights.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>Combined 2 years of sales data</li>
-          <li>Improved regional visibility</li>
-          <li>Automated weekly reports</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/Retail-Sales-Analytics" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
-      <!-- SaaS Churn -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard2.png" alt="SaaS Churn Insights" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">SaaS Churn Insights</h3>
-        <p class="mt-2 text-white/70 text-sm">Built a predictive model to identify churn-prone users and optimize retention strategies.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>Reduced churn by 15%</li>
-          <li>Automated monthly insights</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/SaaS-Churn-Insights" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
-      <!-- Sales Forecasting -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard3.png" alt="Sales Forecasting" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">Sales Forecasting Automation</h3>
-        <p class="mt-2 text-white/70 text-sm">Developed ML-based forecasting to optimize stock and resource planning.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>92% forecast accuracy</li>
-          <li>Automated weekly reports</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/Sales-Forecasting-ML" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
-      <!-- Customer Segmentation -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard4.png" alt="Customer Segmentation" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">Customer Segmentation Dashboard</h3>
-        <p class="mt-2 text-white/70 text-sm">Used clustering to identify high-value customers and improve marketing ROI.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>4 customer clusters</li>
-          <li>3× ROI improvement</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
-      <!-- GenAI Tools -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard5.png" alt="GenAI Tools" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">GenAI Resume & JD Matcher</h3>
-        <p class="mt-2 text-white/70 text-sm">LangChain-based AI assistant for resume Q&A and job description alignment.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>Built with FAISS and LangChain</li>
-          <li>Integrated retrieval-augmented search</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/GenAI-Resume-Matcher" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
-      <!-- Interactive Viz -->
-      <article class="card-gradient rounded-2xl overflow-hidden ring-1 ring-white/10 p-5">
-        <img src="assets/images/dashboard6.png" alt="Interactive Visualization" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">Interactive Data Visualization</h3>
-        <p class="mt-2 text-white/70 text-sm">Built a multi-page visualization dashboard using D3.js for real-time exploration.</p>
-        <ul class="mt-3 text-white/60 text-sm list-disc list-inside">
-          <li>Dynamic filters and transitions</li>
-          <li>Deployed on GitHub Pages</li>
-        </ul>
-        <a href="https://github.com/abusaleh002/Interactive-DataViz" target="_blank" class="inline-block mt-4 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
-      </article>
-
+  <!-- Filter Bar -->
+  <section class="py-10">
+    <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-3">
+      <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter" data-filter="bi" aria-pressed="false">Business Intelligence</button>
+      <button class="filter" data-filter="automation" aria-pressed="false">Data Automation</button>
+      <button class="filter" data-filter="ml" aria-pressed="false">Machine Learning</button>
+      <button class="filter" data-filter="ai" aria-pressed="false">Agentic AI</button>
     </div>
+  </section>
+
+  <!-- Project Grid -->
+  <section class="pb-20">
+    <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- BI -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
+        <img src="assets/images/dashboard-retail.png" alt="Power BI Retail Sales Dashboard case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Retail Sales Performance Dashboard</h3>
+        <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
+        <p class="mt-2 text-white/70 text-sm">Reduced manual reporting time by 60% and improved category performance tracking across stores.</p>
+        <p class="mt-2 text-xs text-white/50">Power BI | SQL | Excel</p>
+        <a href="https://github.com/abusaleh002/Retail-Sales-Performance-Dashboard-Power-BI-DAX-Excel-" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- BI -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
+        <img src="assets/images/dashboard1.png" alt="Marketing Analytics Power BI dashboard case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Marketing Campaign Analytics Dashboard</h3>
+        <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
+        <p class="mt-2 text-white/70 text-sm">Created Power BI dashboards to track campaign ROI and conversion performance across channels.</p>
+        <p class="mt-2 text-xs text-white/50">Power BI | DAX | Excel</p>
+        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- Automation -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
+        <img src="assets/images/automation-bot.png" alt="Automated reporting system case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Automated Sales Reporting System</h3>
+        <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
+        <p class="mt-2 text-white/70 text-sm">Automated daily KPI reports using Python and Google Sheets API, saving 8+ hours weekly.</p>
+        <p class="mt-2 text-xs text-white/50">Python | SQL | Google Sheets API</p>
+        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- Automation -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
+        <img src="assets/images/dashboard-automation.png" alt="Email automation bot for KPIs case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Daily Email Summary Bot for KPIs</h3>
+        <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
+        <p class="mt-2 text-white/70 text-sm">Built a Python script that automatically generates and emails daily performance summaries.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Power BI | SMTP API</p>
+        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- ML -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
+        <img src="assets/images/dashboard-ml.png" alt="IntelliVista AI-powered retail sales forecasting dashboard case study" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">AI-Powered Retail Sales Forecasting</h3>
+        <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
+        <p class="mt-2 text-white/70 text-sm">Improved forecast accuracy by 30% using LSTM and Prophet models on AWS.</p>
+        <p class="mt-2 text-xs text-white/50">Python | AWS | Power BI</p>
+        <a href="https://github.com/abusaleh002/AI-Driven-Sales-Forecasting-Model-Python-AWS-SageMaker" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- ML -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
+        <img src="assets/images/dashboard4.png" alt="Customer segmentation model case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Customer Segmentation Model</h3>
+        <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
+        <p class="mt-2 text-white/70 text-sm">Identified high-value customer groups using clustering and improved ROI by 3x.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Scikit-learn | Power BI</p>
+        <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- AI -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai relative" data-category="ai">
+        <span class="absolute top-2 right-3 bg-ai/20 text-ai text-xs px-2 py-0.5 rounded-full">New</span>
+        <img src="assets/images/GenAi-Tools.png" alt="AI report assistant case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">AI Report Assistant</h3>
+        <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
+        <p class="mt-2 text-white/70 text-sm">Developed a smart assistant that generates data summaries using OpenAI API and LangChain.</p>
+        <p class="mt-2 text-xs text-white/50">LangChain | OpenAI API | Streamlit</p>
+        <a href="https://github.com/abusaleh002/GenAI-Tools" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+
+      <!-- AI -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai relative" data-category="ai">
+        <span class="absolute top-2 right-3 bg-ai/20 text-ai text-xs px-2 py-0.5 rounded-full">New</span>
+        <img src="assets/images/interactive-dashboard-js.png" alt="Chat-with-your-dashboard app case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Chat-with-Your-Dashboard App</h3>
+        <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
+        <p class="mt-2 text-white/70 text-sm">Built an AI-powered chat app that interacts with live dashboards for instant answers.</p>
+        <p class="mt-2 text-xs text-white/50">LangChain | OpenAI | Streamlit</p>
+        <a href="https://github.com/abusaleh002/Interactive-Data-Visualization-D3.js" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+      </div>
+    </div>
+
+    <!-- Load More -->
+    <div class="text-center mt-12">
+      <button id="loadMore" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm transition-all">Load More</button>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="text-center py-16 bg-gradient-to-b from-soft/60 to-ink border-t border-white/10">
+    <h3 class="text-2xl font-bold mb-3 text-white">Want results like these?</h3>
+    <p class="text-white/70 mb-6">Let’s discuss your data and AI goals and create measurable impact for your business.</p>
+    <a href="index.html#contact"
+       class="inline-flex items-center justify-center gap-2 bg-brand-500 hover:bg-brand-400 text-white font-semibold px-8 py-3 rounded-lg shadow-glow hover:-translate-y-[2px] transition-all duration-300">
+      Request a Free Audit <span aria-hidden="true">→</span>
+    </a>
   </section>
 
   <!-- Footer -->
@@ -152,6 +181,51 @@
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- Filtering JS -->
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple filter logic
+    const buttons = document.querySelectorAll('.filter');
+    const cards = document.querySelectorAll('.case-card');
+
+    function setActive(btn) {
+      buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed','true');
+    }
+
+    function applyFilter(filter) {
+      cards.forEach(card => {
+        const cat = (card.dataset.category || '').trim();
+        if (filter === 'all' || cat === filter) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        setActive(btn);
+        applyFilter(filter);
+        // update hash for deep-linking
+        if (filter === 'all') history.replaceState(null, '', location.pathname);
+        else location.hash = filter;
+      });
+    });
+
+    // Support deep linking: /case-studies.html#ml etc.
+    const initial = location.hash.replace('#','');
+    if (['bi','automation','ml','ai'].includes(initial)) {
+      const btn = document.querySelector(`.filter[data-filter="${initial}"]`);
+      if (btn) { setActive(btn); applyFilter(initial); }
+    } else {
+      applyFilter('all');
+    }
+  </script>
 </body>
 </html>
