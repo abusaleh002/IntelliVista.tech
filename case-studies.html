@@ -6,12 +6,12 @@
   <title>Case Studies & Projects | IntelliVista by Abu Saleh</title>
 
   <!-- SEO -->
-  <meta name="description" content="Explore IntelliVista’s portfolio of data analytics, automation, machine learning, and AI projects by Abu Saleh. See real-world results that transform business data into insights." />
-  <meta name="keywords" content="Data analytics case studies, Power BI dashboards, automation, machine learning, AI, Abu Saleh, IntelliVista" />
+  <meta name="description" content="Explore IntelliVista’s portfolio of data analytics, automation, machine learning, and AI projects by Abu Saleh. Real-world dashboards, automation, and AI insights that drive business growth." />
+  <meta name="keywords" content="Data analytics case studies, Power BI dashboards, automation, machine learning, AI projects, Abu Saleh, IntelliVista" />
   <meta name="author" content="Abu Saleh" />
   <link rel="icon" href="assets/icons/favicon.ico" />
 
-  <!-- Tailwind + Fonts -->
+  <!-- Tailwind -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -31,14 +31,84 @@
     }
   </script>
   <style>
-    body { background-color: #0b1020; color: white; }
-    .card { background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)); transition: all 0.3s ease; }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); }
-    .filter { padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); color: white; transition: all 0.3s ease; }
-    .filter:hover { background-color: rgba(255,255,255,0.1); }
-    .filter.active { background-color: #42b2ff; border-color: #42b2ff; }
-  </style>
+  body { background-color: #0b1020; color: white; }
+  .card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    transition: all 0.6s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(66,178,255,0.25); }
+  .filter { padding: 0.5rem 1rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,0.15); color: white; transition: all 0.3s ease; }
+  .filter:hover { background-color: rgba(255,255,255,0.1); }
+  .filter.active { background-color: #42b2ff; border-color: #42b2ff; }
+</style>
+
 </head>
+
+
+<!-- Navigation -->
+<header class="fixed w-full top-0 left-0 z-50 bg-ink/80 backdrop-blur border-b border-white/10">
+  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2 text-white font-semibold text-lg">
+      <img src="assets/images/logo.png" alt="IntelliVista Logo" class="h-6 w-6">
+      IntelliVista
+    </a>
+
+    <!-- Menu Links -->
+    <ul class="hidden md:flex items-center gap-8 text-sm text-white/80">
+      <li><a href="index.html" class="hover:text-brand-400 transition">Home</a></li>
+      <li><a href="index.html#services" class="hover:text-brand-400 transition">Services</a></li>
+      <li><a href="case-studies.html" class="text-brand-400 font-semibold">Case Studies</a></li>
+      <li><a href="index.html#pricing" class="hover:text-brand-400 transition">Pricing</a></li>
+      <li><a href="index.html#contact" class="hover:text-brand-400 transition">Contact</a></li>
+    </ul>
+
+    <!-- CTA Button -->
+    <a href="index.html#contact" class="hidden md:inline-block bg-brand-500 hover:bg-brand-400 text-white px-4 py-2 rounded-lg text-sm font-medium transition">
+      Free Audit
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button id="menuBtn" class="md:hidden text-white focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"/>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-ink border-t border-white/10">
+    <ul class="flex flex-col items-center gap-4 py-4 text-white/80 text-sm">
+      <li><a href="index.html" class="hover:text-brand-400 transition">Home</a></li>
+      <li><a href="index.html#services" class="hover:text-brand-400 transition">Services</a></li>
+      <li><a href="case-studies.html" class="text-brand-400 font-semibold">Case Studies</a></li>
+      <li><a href="index.html#pricing" class="hover:text-brand-400 transition">Pricing</a></li>
+      <li><a href="index.html#contact" class="hover:text-brand-400 transition">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- Offset for fixed navbar -->
+<div class="h-20"></div>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+
+
 
 <body class="font-sans antialiased">
   <!-- Hero -->
@@ -56,103 +126,213 @@
   <section class="py-10">
     <div class="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-3">
       <button class="filter active" data-filter="all" aria-pressed="true">All</button>
-      <button class="filter" data-filter="bi" aria-pressed="false">Business Intelligence</button>
-      <button class="filter" data-filter="automation" aria-pressed="false">Data Automation</button>
-      <button class="filter" data-filter="ml" aria-pressed="false">Machine Learning</button>
-      <button class="filter" data-filter="ai" aria-pressed="false">Agentic AI</button>
+      <button class="filter" data-filter="bi">Business Intelligence</button>
+      <button class="filter" data-filter="automation">Data Automation</button>
+      <button class="filter" data-filter="ml">Machine Learning</button>
+      <button class="filter" data-filter="ai">Agentic AI</button>
     </div>
   </section>
 
-  <!-- Project Grid -->
+  <!-- Case Studies Grid -->
   <section class="pb-20">
     <div class="max-w-7xl mx-auto px-4 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <!-- BI -->
+      <!-- ============ BUSINESS INTELLIGENCE ============ -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
         <img src="assets/images/dashboard-retail.png" alt="Power BI Retail Sales Dashboard case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">Retail Sales Performance Dashboard</h3>
         <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
         <p class="mt-2 text-white/70 text-sm">Reduced manual reporting time by 60% and improved category performance tracking across stores.</p>
         <p class="mt-2 text-xs text-white/50">Power BI | SQL | Excel</p>
-        <a href="https://github.com/abusaleh002/Retail-Sales-Performance-Dashboard-Power-BI-DAX-Excel-" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="https://github.com/abusaleh002/Retail-Sales-Performance-Dashboard-Power-BI-DAX-Excel-" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- BI -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
         <img src="assets/images/dashboard1.png" alt="Marketing Analytics Power BI dashboard case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">Marketing Campaign Analytics Dashboard</h3>
         <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
-        <p class="mt-2 text-white/70 text-sm">Created Power BI dashboards to track campaign ROI and conversion performance across channels.</p>
+        <p class="mt-2 text-white/70 text-sm">Created dashboards to track campaign ROI and conversion performance across channels.</p>
         <p class="mt-2 text-xs text-white/50">Power BI | DAX | Excel</p>
-        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="https://github.com/abusaleh002" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- Automation -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
+        <img src="assets/images/dashboard7.png" alt="Executive KPI Dashboard Power BI case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Executive KPI Dashboard</h3>
+        <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
+        <p class="mt-2 text-white/70 text-sm">Unified KPIs across finance, operations, and sales — reduced reporting time by 90%.</p>
+        <p class="mt-2 text-xs text-white/50">Power BI | SQL | Excel | DAX</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-bi" data-category="bi">
+        <img src="assets/images/dashboard8.png" alt="Operations Dashboard Power BI case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Multi-Department Operations Dashboard</h3>
+        <span class="text-bi text-sm font-semibold block mt-1">Business Intelligence</span>
+        <p class="mt-2 text-white/70 text-sm">Combined HR, logistics, and sales data into one cross-functional Power BI report.</p>
+        <p class="mt-2 text-xs text-white/50">Power BI | PostgreSQL | Power Automate</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <!-- ============ DATA AUTOMATION ============ -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
         <img src="assets/images/automation-bot.png" alt="Automated reporting system case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">Automated Sales Reporting System</h3>
         <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
         <p class="mt-2 text-white/70 text-sm">Automated daily KPI reports using Python and Google Sheets API, saving 8+ hours weekly.</p>
         <p class="mt-2 text-xs text-white/50">Python | SQL | Google Sheets API</p>
-        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- Automation -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
         <img src="assets/images/dashboard-automation.png" alt="Email automation bot for KPIs case study - IntelliVista" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">Daily Email Summary Bot for KPIs</h3>
+        <h3 class="text-lg font-semibold">Daily Email Summary Bot</h3>
         <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
-        <p class="mt-2 text-white/70 text-sm">Built a Python script that automatically generates and emails daily performance summaries.</p>
+        <p class="mt-2 text-white/70 text-sm">Python script generates and emails daily performance summaries automatically.</p>
         <p class="mt-2 text-xs text-white/50">Python | Power BI | SMTP API</p>
-        <a href="https://github.com/abusaleh002" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- ML -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
+        <img src="assets/images/dashboard9.png" alt="Google Sheets to Power BI automation case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Google Sheets to Power BI Automation</h3>
+        <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
+        <p class="mt-2 text-white/70 text-sm">Automated daily data sync between Google Sheets and Power BI dashboards.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Power BI REST API | Google Drive API</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-automation" data-category="automation">
+        <img src="assets/images/dashboard10.png" alt="Automated Report Distribution case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Dynamic Report Distribution System</h3>
+        <span class="text-automation text-sm font-semibold block mt-1">Data Automation</span>
+        <p class="mt-2 text-white/70 text-sm">Automatically sends department-specific reports to respective managers.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Outlook API | Power Automate</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <!-- ============ MACHINE LEARNING ============ -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
-        <img src="assets/images/dashboard-ml.png" alt="IntelliVista AI-powered retail sales forecasting dashboard case study" class="rounded-xl mb-4">
-        <h3 class="text-lg font-semibold">AI-Powered Retail Sales Forecasting</h3>
+        <img src="assets/images/dashboard-ml.png" alt="Retail forecasting model case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">AI-Powered Retail Forecasting</h3>
         <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
-        <p class="mt-2 text-white/70 text-sm">Improved forecast accuracy by 30% using LSTM and Prophet models on AWS.</p>
+        <p class="mt-2 text-white/70 text-sm">Improved forecast accuracy by 30% using LSTM and Prophet models.</p>
         <p class="mt-2 text-xs text-white/50">Python | AWS | Power BI</p>
-        <a href="https://github.com/abusaleh002/AI-Driven-Sales-Forecasting-Model-Python-AWS-SageMaker" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- ML -->
       <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
         <img src="assets/images/dashboard4.png" alt="Customer segmentation model case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">Customer Segmentation Model</h3>
         <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
-        <p class="mt-2 text-white/70 text-sm">Identified high-value customer groups using clustering and improved ROI by 3x.</p>
+        <p class="mt-2 text-white/70 text-sm">Identified high-value customer clusters, improving campaign ROI by 3×.</p>
         <p class="mt-2 text-xs text-white/50">Python | Scikit-learn | Power BI</p>
-        <a href="https://github.com/abusaleh002/Customer-Segmentation" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- AI -->
-      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai relative" data-category="ai">
-        <span class="absolute top-2 right-3 bg-ai/20 text-ai text-xs px-2 py-0.5 rounded-full">New</span>
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
+        <img src="assets/images/dashboard11.png" alt="Customer churn prediction ML case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Customer Churn Prediction Model</h3>
+        <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
+        <p class="mt-2 text-white/70 text-sm">Built model to identify churn-prone users and improve retention by 35%.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Scikit-learn | Random Forest | Pandas</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ml" data-category="ml">
+        <img src="assets/images/dashboard12.png" alt="AI-powered financial forecasting case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">AI Financial Forecasting Model</h3>
+        <span class="text-ml text-sm font-semibold block mt-1">Machine Learning</span>
+        <p class="mt-2 text-white/70 text-sm">Predicted revenue and optimized budgets, improving forecast accuracy by 28%.</p>
+        <p class="mt-2 text-xs text-white/50">Python | Prophet | LSTM | Power BI</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <!-- ============ AGENTIC AI ============ -->
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai" data-category="ai">
         <img src="assets/images/GenAi-Tools.png" alt="AI report assistant case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">AI Report Assistant</h3>
         <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
-        <p class="mt-2 text-white/70 text-sm">Developed a smart assistant that generates data summaries using OpenAI API and LangChain.</p>
+        <p class="mt-2 text-white/70 text-sm">Developed AI assistant that summarizes and generates insights using OpenAI API.</p>
         <p class="mt-2 text-xs text-white/50">LangChain | OpenAI API | Streamlit</p>
-        <a href="https://github.com/abusaleh002/GenAI-Tools" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
 
-      <!-- AI -->
-      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai relative" data-category="ai">
-        <span class="absolute top-2 right-3 bg-ai/20 text-ai text-xs px-2 py-0.5 rounded-full">New</span>
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai" data-category="ai">
         <img src="assets/images/interactive-dashboard-js.png" alt="Chat-with-your-dashboard app case study - IntelliVista" class="rounded-xl mb-4">
         <h3 class="text-lg font-semibold">Chat-with-Your-Dashboard App</h3>
         <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
-        <p class="mt-2 text-white/70 text-sm">Built an AI-powered chat app that interacts with live dashboards for instant answers.</p>
+        <p class="mt-2 text-white/70 text-sm">Built AI chat app to interact with live dashboards for instant answers.</p>
         <p class="mt-2 text-xs text-white/50">LangChain | OpenAI | Streamlit</p>
-        <a href="https://github.com/abusaleh002/Interactive-Data-Visualization-D3.js" target="_blank" class="inline-block mt-3 text-brand-400 hover:text-brand-300 text-sm font-medium">View on GitHub →</a>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
       </div>
-    </div>
 
-    <!-- Load More -->
-    <div class="text-center mt-12">
-      <button id="loadMore" class="px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm transition-all">Load More</button>
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai" data-category="ai">
+        <img src="assets/images/dashboard13.png" alt="Slack AI analytics assistant case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Slack-Based AI Analytics Assistant</h3>
+        <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
+        <p class="mt-2 text-white/70 text-sm">Slack chatbot allows teams to query metrics instantly, saving analysts 4+ hours weekly.</p>
+        <p class="mt-2 text-xs text-white/50">LangChain | OpenAI | Slack API | Python</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
+      <div class="card case-card p-5 rounded-2xl border-t-4 border-ai" data-category="ai">
+        <img src="assets/images/dashboard14.png" alt="Document insights extractor AI case study - IntelliVista" class="rounded-xl mb-4">
+        <h3 class="text-lg font-semibold">Automated Document Insights Extractor</h3>
+        <span class="text-ai text-sm font-semibold block mt-1">Agentic AI</span>
+        <p class="mt-2 text-white/70 text-sm">AI tool extracts KPIs and insights from business reports and PDFs.</p>
+        <p class="mt-2 text-xs text-white/50">LangChain | OCR | OpenAI | Pandas</p>
+        <div class="mt-3 flex justify-between text-sm font-medium">
+          <a href="#" class="text-brand-400 hover:text-brand-300">View on GitHub →</a>
+          <a href="#" class="text-brand-400 hover:text-brand-300">Live Demo →</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -181,51 +361,87 @@
     </div>
   </footer>
 
-  <!-- Filtering JS -->
+  <!-- JS -->
   <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Simple filter logic
-    const buttons = document.querySelectorAll('.filter');
-    const cards = document.querySelectorAll('.case-card');
+  const buttons = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.case-card');
+  const loadMoreBtn = document.createElement('button');
+  loadMoreBtn.id = 'loadMore';
+  loadMoreBtn.textContent = 'Load More';
+  loadMoreBtn.className = 'px-6 py-3 mt-10 rounded-lg bg-white/10 hover:bg-white/20 text-white text-sm transition-all block mx-auto';
+  document.querySelector('.pb-20').appendChild(loadMoreBtn);
 
-    function setActive(btn) {
-      buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed','false'); });
-      btn.classList.add('active');
-      btn.setAttribute('aria-pressed','true');
-    }
+  let visibleCount = 6; // show first 6
+  const increment = 6; // load next 6 on click
 
-    function applyFilter(filter) {
-      cards.forEach(card => {
-        const cat = (card.dataset.category || '').trim();
-        if (filter === 'all' || cat === filter) {
-          card.classList.remove('hidden');
-        } else {
-          card.classList.add('hidden');
-        }
-      });
-    }
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-        setActive(btn);
-        applyFilter(filter);
-        // update hash for deep-linking
-        if (filter === 'all') history.replaceState(null, '', location.pathname);
-        else location.hash = filter;
-      });
+  function showVisibleCards(filter = 'all') {
+    let shown = 0;
+    cards.forEach(card => {
+      const category = card.dataset.category;
+      const match = filter === 'all' || category === filter;
+      if (match && shown < visibleCount) {
+        card.classList.remove('hidden');
+        shown++;
+      } else if (match) {
+        card.classList.add('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
     });
+    // show or hide button
+    const visibleCards = Array.from(cards).filter(c => !c.classList.contains('hidden')).length;
+    const totalMatching = Array.from(cards).filter(c => filter === 'all' || c.dataset.category === filter).length;
+    loadMoreBtn.classList.toggle('hidden', visibleCards >= totalMatching);
+  }
 
-    // Support deep linking: /case-studies.html#ml etc.
-    const initial = location.hash.replace('#','');
-    if (['bi','automation','ml','ai'].includes(initial)) {
-      const btn = document.querySelector(`.filter[data-filter="${initial}"]`);
-      if (btn) { setActive(btn); applyFilter(initial); }
-    } else {
-      applyFilter('all');
+  function setActive(btn) {
+    buttons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter;
+      visibleCount = 6; // reset on new filter
+      setActive(btn);
+      showVisibleCards(filter);
+    });
+  });
+
+  loadMoreBtn.addEventListener('click', () => {
+    visibleCount += increment;
+    const active = document.querySelector('.filter.active').dataset.filter || 'all';
+    showVisibleCards(active);
+  });
+
+  // Deep linking support
+  const initial = location.hash.replace('#','');
+  const defaultFilter = ['bi','automation','ml','ai'].includes(initial) ? initial : 'all';
+  showVisibleCards(defaultFilter);
+  if (defaultFilter !== 'all') {
+    const btn = document.querySelector(`[data-filter="${defaultFilter}"]`);
+    if (btn) setActive(btn);
+  }
+
+
+
+// Scroll animation for cards
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target); // Animate once
     }
-  </script>
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.case-card').forEach(card => observer.observe(card));
+
+
+
+</script>
+
 </body>
 </html>
